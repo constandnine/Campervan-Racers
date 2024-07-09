@@ -1,0 +1,138 @@
+{
+    "name": "PlayerControlls",
+    "maps": [
+        {
+            "name": "PlayerInputs",
+            "id": "2d407895-3e77-40ac-8d05-0647e72c188c",
+            "actions": [
+                {
+                    "name": "Player1MoveRightOrLeft",
+                    "type": "Button",
+                    "id": "59bbbbe4-52c1-471d-b426-304285cf08af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Player1UseBoost",
+                    "type": "Button",
+                    "id": "c371e036-fd3e-4c16-8af5-c1894c061271",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Player2UseBoost",
+                    "type": "Button",
+                    "id": "99296e63-553b-429c-a8f9-1a9966dfa6fd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Player2MoveRightOrLeft",
+                    "type": "Button",
+                    "id": "d1da3949-85ca-4a81-9c85-73b2eb286f0a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e6ea6df6-faaf-43cd-adf7-f9b2847afdac",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2UseBoost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "851ef368-d29a-4289-ad35-ee4ab0a131a0",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2MoveRightOrLeft",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "9398a27c-06c4-4504-b5d0-e5029b552f23",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2MoveRightOrLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "065b2021-62f4-48f5-ac69-ec0b55a1c9fd",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2MoveRightOrLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "fc4a69e9-da89-4630-b846-b6f7ec3c8711",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1UseBoost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "8aa21415-cb10-4e3c-8e6c-24b91c772b21",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1MoveRightOrLeft",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "93a548af-84dd-496d-96cb-6a5d2cac5914",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1MoveRightOrLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "139e1431-4188-4afc-be87-c5305dd3bd69",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1MoveRightOrLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
