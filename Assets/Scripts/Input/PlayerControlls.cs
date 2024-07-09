@@ -28,9 +28,18 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
             ""id"": ""2d407895-3e77-40ac-8d05-0647e72c188c"",
             ""actions"": [
                 {
-                    ""name"": ""Player1MoveRightOrLeft"",
+                    ""name"": ""Player1MoveLeft"",
                     ""type"": ""Button"",
                     ""id"": ""59bbbbe4-52c1-471d-b426-304285cf08af"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Player1MoveRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""91d2a88b-6801-436f-8a36-9b2d23e5e3f3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -46,6 +55,24 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Player2MoveLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1da3949-85ca-4a81-9c85-73b2eb286f0a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Player2MoveRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""3aa9be17-399d-4e6f-a737-c7381b1d5594"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Player2UseBoost"",
                     ""type"": ""Button"",
                     ""id"": ""99296e63-553b-429c-a8f9-1a9966dfa6fd"",
@@ -55,60 +82,16 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Player2MoveRightOrLeft"",
-                    ""type"": ""Button"",
-                    ""id"": ""d1da3949-85ca-4a81-9c85-73b2eb286f0a"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""New action"",
+                    ""type"": ""Value"",
+                    ""id"": ""12c197cd-019b-440d-8125-7148cb565809"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""e6ea6df6-faaf-43cd-adf7-f9b2847afdac"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Player2UseBoost"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""851ef368-d29a-4289-ad35-ee4ab0a131a0"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Player2MoveRightOrLeft"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Negative"",
-                    ""id"": ""9398a27c-06c4-4504-b5d0-e5029b552f23"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Player2MoveRightOrLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Positive"",
-                    ""id"": ""065b2021-62f4-48f5-ac69-ec0b55a1c9fd"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Player2MoveRightOrLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": """",
                     ""id"": ""fc4a69e9-da89-4630-b846-b6f7ec3c8711"",
@@ -121,35 +104,112 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""8aa21415-cb10-4e3c-8e6c-24b91c772b21"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Player1MoveRightOrLeft"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Negative"",
-                    ""id"": ""93a548af-84dd-496d-96cb-6a5d2cac5914"",
+                    ""name"": """",
+                    ""id"": ""a9cc78f6-1da9-4614-a112-4ec4ea642faa"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player1MoveRightOrLeft"",
+                    ""action"": ""Player1MoveLeft"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Positive"",
-                    ""id"": ""139e1431-4188-4afc-be87-c5305dd3bd69"",
+                    ""name"": """",
+                    ""id"": ""b135574a-5686-4df6-8b11-6c132778ef01"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player1MoveRightOrLeft"",
+                    ""action"": ""Player1MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6ea6df6-faaf-43cd-adf7-f9b2847afdac"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player2UseBoost"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f1456352-2cb4-4e5e-830a-0d24f08e9a6e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player2MoveLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c864945b-66f4-4216-bea7-0caf16079d4b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player2MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""be69da43-9fc9-4ee6-80bf-bf1810aeb533"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""9bd61c5e-27a9-4607-b4d4-e65d86fde232"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f0f9bd39-b02c-48cb-acc9-171adb4b46b7"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""90169685-3151-4e6c-8a9b-681c53b37e85"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""19d4d6f7-9444-4ee4-98da-087c0cc6e45e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -160,10 +220,13 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
 }");
         // PlayerInputs
         m_PlayerInputs = asset.FindActionMap("PlayerInputs", throwIfNotFound: true);
-        m_PlayerInputs_Player1MoveRightOrLeft = m_PlayerInputs.FindAction("Player1MoveRightOrLeft", throwIfNotFound: true);
+        m_PlayerInputs_Player1MoveLeft = m_PlayerInputs.FindAction("Player1MoveLeft", throwIfNotFound: true);
+        m_PlayerInputs_Player1MoveRight = m_PlayerInputs.FindAction("Player1MoveRight", throwIfNotFound: true);
         m_PlayerInputs_Player1UseBoost = m_PlayerInputs.FindAction("Player1UseBoost", throwIfNotFound: true);
+        m_PlayerInputs_Player2MoveLeft = m_PlayerInputs.FindAction("Player2MoveLeft", throwIfNotFound: true);
+        m_PlayerInputs_Player2MoveRight = m_PlayerInputs.FindAction("Player2MoveRight", throwIfNotFound: true);
         m_PlayerInputs_Player2UseBoost = m_PlayerInputs.FindAction("Player2UseBoost", throwIfNotFound: true);
-        m_PlayerInputs_Player2MoveRightOrLeft = m_PlayerInputs.FindAction("Player2MoveRightOrLeft", throwIfNotFound: true);
+        m_PlayerInputs_Newaction = m_PlayerInputs.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -225,18 +288,24 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
     // PlayerInputs
     private readonly InputActionMap m_PlayerInputs;
     private List<IPlayerInputsActions> m_PlayerInputsActionsCallbackInterfaces = new List<IPlayerInputsActions>();
-    private readonly InputAction m_PlayerInputs_Player1MoveRightOrLeft;
+    private readonly InputAction m_PlayerInputs_Player1MoveLeft;
+    private readonly InputAction m_PlayerInputs_Player1MoveRight;
     private readonly InputAction m_PlayerInputs_Player1UseBoost;
+    private readonly InputAction m_PlayerInputs_Player2MoveLeft;
+    private readonly InputAction m_PlayerInputs_Player2MoveRight;
     private readonly InputAction m_PlayerInputs_Player2UseBoost;
-    private readonly InputAction m_PlayerInputs_Player2MoveRightOrLeft;
+    private readonly InputAction m_PlayerInputs_Newaction;
     public struct PlayerInputsActions
     {
         private @PlayerControlls m_Wrapper;
         public PlayerInputsActions(@PlayerControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Player1MoveRightOrLeft => m_Wrapper.m_PlayerInputs_Player1MoveRightOrLeft;
+        public InputAction @Player1MoveLeft => m_Wrapper.m_PlayerInputs_Player1MoveLeft;
+        public InputAction @Player1MoveRight => m_Wrapper.m_PlayerInputs_Player1MoveRight;
         public InputAction @Player1UseBoost => m_Wrapper.m_PlayerInputs_Player1UseBoost;
+        public InputAction @Player2MoveLeft => m_Wrapper.m_PlayerInputs_Player2MoveLeft;
+        public InputAction @Player2MoveRight => m_Wrapper.m_PlayerInputs_Player2MoveRight;
         public InputAction @Player2UseBoost => m_Wrapper.m_PlayerInputs_Player2UseBoost;
-        public InputAction @Player2MoveRightOrLeft => m_Wrapper.m_PlayerInputs_Player2MoveRightOrLeft;
+        public InputAction @Newaction => m_Wrapper.m_PlayerInputs_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -246,34 +315,52 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerInputsActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerInputsActionsCallbackInterfaces.Add(instance);
-            @Player1MoveRightOrLeft.started += instance.OnPlayer1MoveRightOrLeft;
-            @Player1MoveRightOrLeft.performed += instance.OnPlayer1MoveRightOrLeft;
-            @Player1MoveRightOrLeft.canceled += instance.OnPlayer1MoveRightOrLeft;
+            @Player1MoveLeft.started += instance.OnPlayer1MoveLeft;
+            @Player1MoveLeft.performed += instance.OnPlayer1MoveLeft;
+            @Player1MoveLeft.canceled += instance.OnPlayer1MoveLeft;
+            @Player1MoveRight.started += instance.OnPlayer1MoveRight;
+            @Player1MoveRight.performed += instance.OnPlayer1MoveRight;
+            @Player1MoveRight.canceled += instance.OnPlayer1MoveRight;
             @Player1UseBoost.started += instance.OnPlayer1UseBoost;
             @Player1UseBoost.performed += instance.OnPlayer1UseBoost;
             @Player1UseBoost.canceled += instance.OnPlayer1UseBoost;
+            @Player2MoveLeft.started += instance.OnPlayer2MoveLeft;
+            @Player2MoveLeft.performed += instance.OnPlayer2MoveLeft;
+            @Player2MoveLeft.canceled += instance.OnPlayer2MoveLeft;
+            @Player2MoveRight.started += instance.OnPlayer2MoveRight;
+            @Player2MoveRight.performed += instance.OnPlayer2MoveRight;
+            @Player2MoveRight.canceled += instance.OnPlayer2MoveRight;
             @Player2UseBoost.started += instance.OnPlayer2UseBoost;
             @Player2UseBoost.performed += instance.OnPlayer2UseBoost;
             @Player2UseBoost.canceled += instance.OnPlayer2UseBoost;
-            @Player2MoveRightOrLeft.started += instance.OnPlayer2MoveRightOrLeft;
-            @Player2MoveRightOrLeft.performed += instance.OnPlayer2MoveRightOrLeft;
-            @Player2MoveRightOrLeft.canceled += instance.OnPlayer2MoveRightOrLeft;
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
         }
 
         private void UnregisterCallbacks(IPlayerInputsActions instance)
         {
-            @Player1MoveRightOrLeft.started -= instance.OnPlayer1MoveRightOrLeft;
-            @Player1MoveRightOrLeft.performed -= instance.OnPlayer1MoveRightOrLeft;
-            @Player1MoveRightOrLeft.canceled -= instance.OnPlayer1MoveRightOrLeft;
+            @Player1MoveLeft.started -= instance.OnPlayer1MoveLeft;
+            @Player1MoveLeft.performed -= instance.OnPlayer1MoveLeft;
+            @Player1MoveLeft.canceled -= instance.OnPlayer1MoveLeft;
+            @Player1MoveRight.started -= instance.OnPlayer1MoveRight;
+            @Player1MoveRight.performed -= instance.OnPlayer1MoveRight;
+            @Player1MoveRight.canceled -= instance.OnPlayer1MoveRight;
             @Player1UseBoost.started -= instance.OnPlayer1UseBoost;
             @Player1UseBoost.performed -= instance.OnPlayer1UseBoost;
             @Player1UseBoost.canceled -= instance.OnPlayer1UseBoost;
+            @Player2MoveLeft.started -= instance.OnPlayer2MoveLeft;
+            @Player2MoveLeft.performed -= instance.OnPlayer2MoveLeft;
+            @Player2MoveLeft.canceled -= instance.OnPlayer2MoveLeft;
+            @Player2MoveRight.started -= instance.OnPlayer2MoveRight;
+            @Player2MoveRight.performed -= instance.OnPlayer2MoveRight;
+            @Player2MoveRight.canceled -= instance.OnPlayer2MoveRight;
             @Player2UseBoost.started -= instance.OnPlayer2UseBoost;
             @Player2UseBoost.performed -= instance.OnPlayer2UseBoost;
             @Player2UseBoost.canceled -= instance.OnPlayer2UseBoost;
-            @Player2MoveRightOrLeft.started -= instance.OnPlayer2MoveRightOrLeft;
-            @Player2MoveRightOrLeft.performed -= instance.OnPlayer2MoveRightOrLeft;
-            @Player2MoveRightOrLeft.canceled -= instance.OnPlayer2MoveRightOrLeft;
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
         }
 
         public void RemoveCallbacks(IPlayerInputsActions instance)
@@ -293,9 +380,12 @@ public partial class @PlayerControlls: IInputActionCollection2, IDisposable
     public PlayerInputsActions @PlayerInputs => new PlayerInputsActions(this);
     public interface IPlayerInputsActions
     {
-        void OnPlayer1MoveRightOrLeft(InputAction.CallbackContext context);
+        void OnPlayer1MoveLeft(InputAction.CallbackContext context);
+        void OnPlayer1MoveRight(InputAction.CallbackContext context);
         void OnPlayer1UseBoost(InputAction.CallbackContext context);
+        void OnPlayer2MoveLeft(InputAction.CallbackContext context);
+        void OnPlayer2MoveRight(InputAction.CallbackContext context);
         void OnPlayer2UseBoost(InputAction.CallbackContext context);
-        void OnPlayer2MoveRightOrLeft(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
