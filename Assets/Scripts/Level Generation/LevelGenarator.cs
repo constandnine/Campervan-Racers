@@ -8,7 +8,7 @@ public class LevelGenarator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Campervan"))
+        if (other.CompareTag("Campervan"))
         {
             StartCoroutine("Transfer");
         }
@@ -16,7 +16,7 @@ public class LevelGenarator : MonoBehaviour
 
     IEnumerator Transfer()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
 
         Vector3 currentPosition = transform.parent.position;
 

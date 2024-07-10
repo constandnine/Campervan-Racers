@@ -6,8 +6,6 @@ public class SpawnCars : MonoBehaviour
 {
     [Header("Objects")]
 
-    bool spawnCarOnRaod1;
-
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
 
@@ -25,31 +23,26 @@ public class SpawnCars : MonoBehaviour
 
     [Header("Road 2 Car Spawning")]
 
-    bool spawnCarOnRaod2;
-
     [SerializeField] private float distanceFromPlayer2;
     [SerializeField] private int road2MaximalCarCount;
     public int road2CarCount;
 
     private List<Vector3> recentCarPositions2 = new List<Vector3>();
 
-    private void Start()
-    {
-        StartCoroutine(WaitFarCarSapwning());
-    }
+
     private void Update()
     {
 
         distanceFromPlayer1 = Vector3.Distance(player1.transform.position, GetSpawnPosition(player1));
 
-        if (distanceFromPlayer1 < 120 && road1CarCount < road1MaximalCarCount && spawnCarOnRaod1 == true)
+        if (distanceFromPlayer1 < 120 && road1CarCount < road1MaximalCarCount)
         {
             SpawnCarsOnRoad1();
         }
 
         distanceFromPlayer2 = Vector3.Distance(player2.transform.position, GetSpawnPosition(player2));
 
-        if (distanceFromPlayer2 < 120 && road2CarCount < road2MaximalCarCount && spawnCarOnRaod2 == true)
+        if (distanceFromPlayer2 < 120 && road2CarCount < road2MaximalCarCount)
         {
             SpawnCarsOnRoad2();
         }
@@ -104,13 +97,5 @@ public class SpawnCars : MonoBehaviour
         spawnPosition.x += Random.Range(-5, 5);
         spawnPosition.z += Random.Range(0, 100);
         return spawnPosition;
-    }
-
-    IEnumerator WaitFarCarSapwning()
-    {
-        yield return new WaitForSeconds(5f);
-
-        spawnCarOnRaod1 = true;
-        spawnCarOnRaod2 = true;
     }
 }

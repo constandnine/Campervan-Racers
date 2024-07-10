@@ -8,8 +8,12 @@ public class DestroyAfterOverTake : MonoBehaviour
     [SerializeField] private SpawnCars spawnCars;
     private void OnTriggerEnter(Collider other)
     {
-        // Destroy the GameObject
-        Destroy(other.gameObject);
+
+        if (CompareTag("Obstacle"))
+        {
+            // Destroy the GameObject
+            Destroy(other.gameObject);
+        }
 
 
         if (CompareTag("Road 1 Car Destroyer"))
