@@ -29,7 +29,7 @@ public class CampervanControllerPlayer2 : MonoBehaviour
         float move = 0f;
 
         // Moves the campervan forwards cuntinuesly.
-        transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
+        transform.Translate(Vector3.back * movementSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {

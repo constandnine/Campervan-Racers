@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class DestroyAfterOverTake : MonoBehaviour
 {
-    private void Update()
+
+    [SerializeField] private SpawnCars spawnCars;
+    private void OnTriggerEnter(Collider other)
     {
-        // Find all objects with the tag "Player"
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Campervan");
+        // Destroy the GameObject
+        Destroy(other.gameObject);
 
-        // Assume initially that no player is within range
-        bool playerInRange = false;
 
-        // Check distance to each player
-        foreach (GameObject player in players)
+        if (CompareTag("Road 1 Car Destroyer"))
         {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
-
-            if (distance <= 15.0f)
-            {
-                playerInRange = true;
-                break;
-            }
+            spawnCars.road1CarCount--;
         }
 
-        // Destroy the object if no player is within 15 units
-        if (!playerInRange)
+
+        // Check if the tag is "two"
+        else if (CompareTag("Road 2 Car Destroyer"))
         {
-            Destroy(gameObject);
+            spawnCars.road2CarCount--;
         }
     }
 }
