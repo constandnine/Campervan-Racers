@@ -15,6 +15,6 @@ public class CampervanController : MonoBehaviour
     private void CampervanMoevement()
     {
         // Moves the campervan forwards cuntinuesly.
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
     }
 }
